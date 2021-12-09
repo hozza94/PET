@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <style>
+      body {
+        background-color: white;
+       }
+      
+      .announce {
+        border-radius: 25px;
+        background-color:white;
+        width: 320px;
+        border: 2.5px solid black;
+        border-style: dotted;
+        padding: 70px;
+        margin: 40px;
+        }
+      
+    
+      h1 {
+          text-align: center;
+        color: black;
+     
+        }
+      
+      .header {
+        padding: 60px;
+        text-align: center;
+        background: #77aad9;
+        color: white;
+        font-size: 20px;
+        }
+        
+
+      h4 {
+        text-align: center;
+        }
+    
+      </style>
+      </head>
+      
+      <body>
+
+    
+    
+
+<html>
+<head>
+<style>
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 180px;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+</style>
+</head>
+
+ <form action="upload-test" enctype="multipart/form-data" method="post" autocomplete="off">   
+ <div class="header">
+    <h1> My Reward ✌🏻 </h1>
+    <p> 현재 나의 포인트는? 페트모아 태산</p>
+    </div>
+      
+    
+ <h3> 포인트 현황입니다</h3>
+   <p> {{id}}님의 투명 폐트병 분리배출 성공을 위해 함께 참여 해주셔서 감사합니다. 파이팅 😎</p>
+     <br>
+
+
+
+<body>
+<div class="gallery">
+    <img src="{{url_for('static', path='images/recycling-bin.png') }}" alt="bin" width="600" height="400">
+  <h4> 기기번호 </h4>
+  <div class="desc"> 강남01 </div>
+</div>
+
+<div class="gallery">
+     <img src="{{url_for('static', path='images/nolabel.png') }}" alt="pet_num"width="600" height="400">
+  <h4> 페트병 수 (총합) </h4>
+  <div class="desc">{{pet_num}} 개</div>
+</div>
+
+<div class="gallery">
+    <img src="{{url_for('static', path='images/point.png') }}" alt="point" style="width:100%">
+    <h4> 포인트 </h4>
+  <div class="desc">{{point}}<br><p> 5000포인트까지 함께해요🙂</p></div>
+</div>
+
+
+</body>
+</html>
+

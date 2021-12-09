@@ -1,0 +1,76 @@
+<head>
+  <style>
+  body {
+    background-color: white;
+   }
+  
+  .announce {
+    border-radius: 25px;
+    background-color:white;
+    width: 320px;
+    border: 2.5px solid black;
+    border-style: dotted;
+    padding: 70px;
+    margin: 40px;
+    }
+  
+
+  h1 {
+      text-align: center;
+    color: black;
+ 
+    }
+  
+  .header {
+    padding: 60px;
+    text-align: center;
+    background: #77aad9;
+    color: white;
+    font-size: 20px;
+    }
+   
+   h3 {
+    margin: 30px;
+    }
+
+
+  </style>
+</head>
+  
+<body>
+  <form action="upload-test" enctype="multipart/form-data" method="post" autocomplete="off">   
+    <div class="header">
+    <h1> Test Result </h1>
+    <p> 투명 페트병 분리배출 테스트 결과 </p>
+    </div>
+    
+    <center>
+      <div class = "announce">
+        <h4> 테스트 결과 입니다 👾</h4>
+          
+        <p> 총 {{total}}개의 이미지 파일을 확인했습니다. </p>
+        <p> {{pet_t}}개 중 {{pass_t}}개 통과했습니다 </p>
+
+        <!-- a태그 활용 주소 이동! -->
+        <a href = {{url}}>
+          <img class="qrcode"
+          src="{{url_for('static',  path='images/qr.png') }}"
+          alt={{url}} height="240" width="240">
+        </a>
+      </div>
+    </center>
+
+  <br>
+    <br>
+    <center>
+      <div>
+      <h3> 👇테스트에 사용된 이미지 결과 👇 </h3>
+      <br>
+      {% for img in img_path %}
+        <img class="predict"
+        src="{{url_for('static',  path=img) }}" alt = 'img' height="240" width="240">
+      {% endfor %}
+      </div>
+    </center>
+  </form>
+</body>

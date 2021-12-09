@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <style>
+      body {
+        background-color: white;
+       }
+      
+      .announce {
+        border-radius: 25px;
+        background-color:white;
+        width: 320px;
+        border: 2.5px solid black;
+        border-style: dotted;
+        padding: 70px;
+        margin: 40px;
+        }
+      
+    
+      h1 {
+          text-align: center;
+        color: black;
+     
+        }
+      
+      .header {
+        padding: 60px;
+        text-align: center;
+        background: #77aad9;
+        color: white;
+        font-size: 20px;
+        }
+        
+       .box{
+      	border-radius: 25px;
+        background-color:white;
+        border: 2.5px solid black;
+        padding: 30px;
+        margin: 30px;
+        }
+        
+      h4 {
+        text-align: center;
+        }
+      
+      img {
+          border-radius: 50%;
+          padding: 10px;
+        }
+        
+        html {
+        box-sizing: border-box;
+          }
+    
+      *, *:before, *:after {
+        box-sizing: inherit;
+          }
+          
+        .column {
+        float: left;
+        width: 33.3%;
+        margin-bottom: 16px;
+        padding: 0 8px;
+          }
+    
+      @media screen and (max-width: 650px) {
+        .column {
+          width: 100%;
+          display: block;
+            }
+          }
+    
+      .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          }
+       
+       .container {
+        padding: 0 16px;
+          }
+    
+      .container::after, .row::after {
+        content: "";
+        clear: both;
+        display: table;
+          }
+    
+      .title {
+        color: darkgrey;
+        text-align: center;
+          }
+      
+       .button:hover {
+        background-color: #555;
+          }
+    
+  
+      div.gallery {
+        margin: 5px;
+        border: 1px solid #ccc;
+        float: left;
+        width: 180px;
+      }
+
+      div.gallery:hover {
+        border: 1px solid #777;
+      }
+
+      div.gallery img {
+        width: 100%;
+        height: auto;
+      }
+
+      div.desc {
+        padding: 15px;
+        text-align: center;
+      }
+    </style>
+    </head>
+
+ <form action="upload-test" enctype="multipart/form-data" method="post" autocomplete="off">   
+ <div class="header">
+    <h1> My Reward ✌🏻 </h1>
+    <p> 현재 나의 포인트는? 페트모아 태산</p>
+    </div>
+      
+    
+ <h3> 포인트 현황입니다</h3>
+   <p> {{id}}님의 투명 폐트병 분리배출 성공을 위해 함께 참여 해주셔서 감사합니다.<br>
+   		5000포인트에 도달하시면 리워드로 사용가능 합니다. 파이팅 😎</p>
+     <br>
+     
+      </style>
+      </head>
+    
+<body>
+<div class = "box">
+      <div class="row">
+        <div class="column">
+          <div class="card">
+            <img src="{{url_for('static', path='images/recycling-bin.png') }}" alt="Jane" style="width:100%">
+            <div class="container">
+              <h4>기기 번호</h4>
+              <p class="title"> 강남 01 </p>
+            </div>
+    
+          </div>
+        </div>
+    
+        <div class="column">
+          <div class="card">
+            <img src="{{url_for('static', path='images/nolabel.png') }}" alt="Mike" style="width:100%">
+            <div class="container">
+              <h4> 패트병 수 (총합) </h4>
+              <p class="title">{{pet_num}}</p>
+            </div>
+          </div>
+        </div>
+    
+        <div class="column">
+          <div class="card">
+            <img src="{{url_for('static', path='images/point.png') }}" alt="John" style="width:100%">
+            <div class="container">
+              <h4> 포인트 </h4>
+              <p class="title">{{point}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+</body>
+</html>

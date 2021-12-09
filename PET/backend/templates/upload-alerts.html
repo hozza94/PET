@@ -1,0 +1,57 @@
+<head>
+  <style>
+  body {
+    background-color: white;
+   }
+  
+  .announce {
+    border-radius: 25px;
+    background-color:white;
+    width: 320px;
+    border: 2.5px solid black;
+    border-style: dotted;
+    padding: 70px;
+    margin: 40px;
+    }
+  
+
+  h1 {
+  	text-align: center;
+    color: black;
+ 
+    }
+  
+  .header {
+    padding: 60px;
+    text-align: center;
+    background: #77aad9;
+    color: white;
+    font-size: 20px;
+    }
+
+
+  </style>
+  </head>
+  
+  <body>
+  <form action="upload-test" enctype="multipart/form-data" method="post" autocomplete="off">   
+    <div class="header">
+    <h1>Image Upload 📸</h1>
+    <p> 투명 페트병 분리배출 결과 확인하기 </p>
+    </div>
+    
+      <center><div class = "announce">
+        <label for "file">사진을 업로드 해주세요 (여러장 선택 가능)🙂</label>
+        <br>
+        <br>
+        <br>
+        <br>
+        <input type="file" id="file" name="files" multiple="multiple">
+       <button type="button submit"><i></i>제출 </button>
+          </div></center>
+  </form>
+  </body>
+
+
+
+

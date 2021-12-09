@@ -1,0 +1,56 @@
+  <head>
+    <style>
+      body {
+        background-color: white;
+      }
+      
+      .announce {
+        border-radius: 25px;
+        background-color:white;
+        width: 320px;
+        border: 2.5px solid black;
+        border-style: dotted;
+        padding: 70px;
+        margin: 40px;
+        }
+      
+    
+      h1 {
+          text-align: center;
+        color: black;
+    
+        }
+      
+      .header {
+        padding: 60px;
+        text-align: center;
+        background: #77aad9;
+        color: white;
+        font-size: 20px;
+        }
+
+    
+    </style>
+  </head>
+    
+  <body>
+    <form action="upload-card" enctype="multipart/form-data" method="post" autocomplete="off">   
+      <div class="header">
+        <h1> Check Your ID 💳</h1>
+        <p> OCR 결과 확인하기 </p>
+      </div>
+        
+      <center>
+        <div class = "announce">
+          <label> ✔️ 카드의 ID는 {{user_id}} 입니다. </label>
+          <br>
+          <br>
+          <br>
+          <img class= "id" src="{{url_for('static', path='images/card.png') }}" alt="Jane" style="width:320px">
+          <br>
+          <br>
+          <button type="button" onclick="location.href = '{{url}}';"> 이미지 제출하기 </button>
+        </div>
+      </center>
+    </form>
+  </body>
